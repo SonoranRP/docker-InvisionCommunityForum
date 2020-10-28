@@ -2,7 +2,7 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
 [![Docker Stars](https://img.shields.io/docker/stars/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
-[![Docker Build](https://img.shields.io/docker/automated/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
+[![Docker Build](https://img.shields.io/docker/cloud/automated/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
 
 Latest offical [PHP-FPM](https://hub.docker.com/_/php/) container configured with basic extensions and [production settings](https://github.com/php/php-src/blob/master/php.ini-production). Includes additional extensions for Invision Community Forum software.
