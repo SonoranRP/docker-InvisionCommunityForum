@@ -4,8 +4,13 @@ FROM php:fpm
 RUN set -xe \
 	&& apt-get update \
 	&& apt-get install -y libicu-dev --no-install-recommends \
+	&& apt-get install -y zlib1g-dev \
+		libpng-dev \
+		libzip-dev \
 	&& docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
-	&& docker-php-ext-install -j$(nproc) pdo_mysql mysqli calendar intl \
+	&& docker-php-ext-install -j$(nproc) pdo_mysql mysqli calendar intl zip exif \
+	&& docker-php-ext-configure gd \
+    && docker-php-ext-install -j$(nproc) gd \
 	&& apt-get purge -y --auto-remove libicu-dev \
 	&& rm -rf /var/lib/apt/lists/*
 

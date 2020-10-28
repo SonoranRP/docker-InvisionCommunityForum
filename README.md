@@ -1,11 +1,11 @@
 # PHP FPM Container
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/joebiellik/php.svg)](https://hub.docker.com/r/joebiellik/php/)
-[![Docker Stars](https://img.shields.io/docker/stars/joebiellik/php.svg)](https://hub.docker.com/r/joebiellik/php/)
-[![Docker Build](https://img.shields.io/docker/automated/joebiellik/php.svg)](https://hub.docker.com/r/joebiellik/php/)
-[![Docker Build Status](https://img.shields.io/docker/build/joebiellik/php.svg)](https://hub.docker.com/r/joebiellik/php/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
+[![Docker Stars](https://img.shields.io/docker/stars/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
+[![Docker Build](https://img.shields.io/docker/automated/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/sonoranrp/php-invisionforum.svg)](https://hub.docker.com/r/sonoranrp/php-invisionforum/)
 
-Latest offical [PHP-FPM](https://hub.docker.com/_/php/) container configured with basic extensions and [production settings](https://github.com/php/php-src/blob/master/php.ini-production).
+Latest offical [PHP-FPM](https://hub.docker.com/_/php/) container configured with basic extensions and [production settings](https://github.com/php/php-src/blob/master/php.ini-production). Includes additional extensions for Invision Community Forum software.
 
 ## Changes to offical container
 
@@ -15,6 +15,9 @@ Latest offical [PHP-FPM](https://hub.docker.com/_/php/) container configured wit
 - mysqli
 - calendar
 - intl
+- GD
+- ZIP
+- EXIF
 
 ### php.ini
 
@@ -24,13 +27,13 @@ Latest offical [PHP-FPM](https://hub.docker.com/_/php/) container configured wit
 
 ## Configuration
 
-See [example directory](https://github.com/jcbiellikltd/docker-dhcpd/tree/master/example) for sample config file showing how to use this container with [nginx](https://hub.docker.com/_/nginx/).
+See [example directory](https://github.com/SonoranRP/docker-php/tree/master/example) for sample config file showing how to use this container with [nginx](https://hub.docker.com/_/nginx/).
 
 ## Quickstart
 
 ```yml
 php:
-  image: joebiellik/php
+  image: sonoranrp/php-invisionforum
 
   volumes:
     # Website files
