@@ -9,7 +9,7 @@ RUN set -xe \
 		libzip-dev \
 		libjpeg62-turbo-dev \
 	&& docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
-	&& docker-php-ext-install -j$(nproc) pdo_mysql mysqli calendar intl zip exif \
+	&& docker-php-ext-install -j$(nproc) pdo_mysql mysqli calendar intl zip exif sockets \
 	&& docker-php-ext-configure gd --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
 	&& apt-get purge -y --auto-remove libicu-dev \
